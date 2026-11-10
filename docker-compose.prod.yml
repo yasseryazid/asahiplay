@@ -8,9 +8,12 @@ services:
     entrypoint: ["entrypoint.prod.sh"]
     command: ["php-fpm"]
     restart: unless-stopped
-    env_file: .env
+    # Laravel membaca .env sendiri. Jangan pakai env_file: nilai kosong (mis. APP_KEY=) akan menimpa .env.
     environment:
       DB_HOST: db
+      DB_DATABASE: ${DB_DATABASE:-asahi}
+      DB_USERNAME: ${DB_USERNAME:-asahi}
+      DB_PASSWORD: ${DB_PASSWORD}
     volumes:
       - ./:/var/www/html
     depends_on:
