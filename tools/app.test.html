@@ -375,6 +375,7 @@ body:not(.lang-id) .langsw .le,body.lang-id .langsw .li{background:var(--ink);co
 .err{color:var(--bad);font-weight:800;font-size:14px;min-height:18px}
 .kidchip{margin-top:10px;display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--line);border-radius:99px;padding:6px 8px 6px 16px;font-weight:700;font-size:15px;box-shadow:0 3px 0 var(--line)}
 .kidchip span{background:var(--ink);color:#fff;border-radius:99px;padding:3px 10px;font-size:12px;font-weight:800}
+.signup{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;background:#FFF3D6;border:2px dashed #F2C66B;border-radius:20px;padding:14px 16px;margin:12px 0;color:#6B4E0E}.signup span{font-size:14px}.signup .gbtn{margin:4px 0 0}
 .guestbar{display:inline-block;margin-top:10px;background:#FFF3D6;border:2px dashed #F2C66B;border-radius:99px;padding:6px 14px;font-size:13px;font-weight:600;color:#8A6412;text-decoration:none}
 .lv{position:relative}
 .lv.mine{border-color:var(--coral);box-shadow:0 4px 0 #FFD3C5}
@@ -456,6 +457,7 @@ body:not(.lang-id) .langsw .le,body.lang-id .langsw .li{background:var(--ink);co
       <div class="duo" id="rDuo"></div>
     </div>
     <div class="promise" id="rPromise"></div>
+    <div class="signup" id="rSignup" style="display:none"><b>Simpan bintang &amp; kenangan si kecil</b><span>Masuk dengan Google agar perkembangan tidak hilang dan bisa dibuka di perangkat lain.</span><a class="gbtn" href="/auth/google">Masuk dengan Google</a><button class="linkbtn" id="signupLater">Nanti saja</button></div>
     <div class="chat" id="rChat"></div>
     <div class="stampbox" id="rStampBox"><div class="k" id="rStampK"></div><div class="stamps" id="rStamps"></div></div>
     <div class="rbtns">
@@ -1389,6 +1391,15 @@ function finish() {
   $('#rText').textContent = t.kind === 'olym' || t.kind === 'bank' ? what + (G.together ? ', dipecahkan bersama' : '') : G.together ? `${what} bersama!` : what + (G.miss ? ` · ${G.miss}× belum tepat` : ' · tanpa salah!');
   $('#rDuo').innerHTML = G.together && t.kind !== 'olym' && t.kind !== 'ws' ? `<span style="background:${KID_C}">${esc(kidName())} ${G.by[0]}</span><span style="background:${PAR_C}">${esc(parName())} ${G.by[1]}</span>` : '';
   const old = $('#rcard .stamped'); if (old) old.remove();
+
+  // ajak tamu masuk: setelah sesi pertama, lalu lagi di sesi ke-3 bila belum dilewati dua kali
+  const su = $('#rSignup'); su.style.display = 'none';
+  if (BOOT.server && !BOOT.user) {
+    let n = 0, skipped = 0;
+    try { n = +sessionStorage.getItem('asahi_plays') + 1 || 1; sessionStorage.setItem('asahi_plays', n); skipped = +localStorage.getItem('asahi_signup_skip') || 0; } catch (e) {}
+    if (skipped < 2 && (n === 1 || n === 3)) su.style.display = '';
+  }
+  $('#signupLater').onclick = () => { su.style.display = 'none'; try { localStorage.setItem('asahi_signup_skip', (+localStorage.getItem('asahi_signup_skip') || 0) + 1); } catch (e) {} };
 
   const pr = $('#rPromise');
   if (profile.promise) { pr.style.display = ''; pr.innerHTML = `<div class="k">Janji kecil dari ${esc(parName())} terbuka!</div><div class="v">${esc(profile.promise)}</div>`; }
