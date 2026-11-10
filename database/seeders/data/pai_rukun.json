@@ -1,0 +1,287 @@
+{
+ "slug": "PAI_RUKUN",
+ "title": "PAI: Rukun Islam & Syahadat",
+ "level": "k1",
+ "ordered": false,
+ "public": true,
+ "assets": null,
+ "questions": [
+  {
+   "fmt": "pg",
+   "q": "Agama yang diridai oleh Allah Swt. adalah agama ….",
+   "opts": [
+    "Islam",
+    "Kristen",
+    "Buddha"
+   ],
+   "ans": "Islam",
+   "sol": "Agama yang diridai Allah Swt. adalah Islam."
+  },
+  {
+   "fmt": "pg",
+   "q": "Rukun Islam ada … perkara.",
+   "opts": [
+    "4",
+    "5",
+    "6"
+   ],
+   "ans": "5",
+   "sol": "Rukun Islam ada 5: syahadat, salat, zakat, puasa, dan haji."
+  },
+  {
+   "fmt": "pg",
+   "q": "Rukun Islam yang pertama adalah ….",
+   "opts": [
+    "salat",
+    "puasa",
+    "syahadat"
+   ],
+   "ans": "syahadat",
+   "sol": "Rukun Islam pertama adalah membaca dua kalimat syahadat."
+  },
+  {
+   "fmt": "pg",
+   "q": "Syahadat artinya adalah ….",
+   "opts": [
+    "sumpah",
+    "persaksian",
+    "janji"
+   ],
+   "ans": "persaksian",
+   "sol": "Syahadat artinya persaksian."
+  },
+  {
+   "fmt": "pg",
+   "q": "Syahadatain artinya dua kalimat ….",
+   "opts": [
+    "syahadat",
+    "taubat",
+    "pujian"
+   ],
+   "ans": "syahadat",
+   "sol": "Syahadatain artinya dua kalimat syahadat: syahadat tauhid dan syahadat rasul."
+  },
+  {
+   "fmt": "pg",
+   "q": "Bunyi syahadat tauhid adalah bersaksi bahwa tidak ada tuhan selain ….",
+   "opts": [
+    "Nabi Muhammad",
+    "Allah Swt.",
+    "malaikat"
+   ],
+   "ans": "Allah Swt.",
+   "sol": "Syahadat tauhid: aku bersaksi tiada Tuhan selain Allah."
+  },
+  {
+   "fmt": "pg",
+   "q": "Salat sehari semalam ada … waktu.",
+   "opts": [
+    "4",
+    "5",
+    "6"
+   ],
+   "ans": "5",
+   "sol": "Salat wajib ada 5 waktu: Subuh, Zuhur, Asar, Magrib, dan Isya."
+  },
+  {
+   "fmt": "pg",
+   "q": "Bacaan syahadat kita baca (dengar) saat ….",
+   "opts": [
+    "akan makan",
+    "mendapat hadiah",
+    "azan dan iqamah"
+   ],
+   "ans": "azan dan iqamah",
+   "sol": "Kalimat syahadat ada di dalam azan dan iqamah."
+  },
+  {
+   "fmt": "pg",
+   "q": "Rukun Islam yang kedua setelah syahadat adalah ….",
+   "opts": [
+    "zakat",
+    "salat",
+    "haji"
+   ],
+   "ans": "salat",
+   "sol": "Setelah syahadat, rukun Islam kedua adalah salat."
+  },
+  {
+   "fmt": "pg",
+   "q": "Pergi haji termasuk rukun Islam yang ke ….",
+   "opts": [
+    "4",
+    "5",
+    "6"
+   ],
+   "ans": "5",
+   "sol": "Haji adalah rukun Islam yang kelima."
+  },
+  {
+   "fmt": "kata",
+   "q": "Salat termasuk rukun Islam yang ke-____.",
+   "opts": [
+    "2",
+    "1",
+    "5"
+   ],
+   "ans": "2",
+   "sol": "Salat adalah rukun Islam yang kedua."
+  },
+  {
+   "fmt": "kata",
+   "q": "Melaksanakan ibadah haji ke Baitullah adalah rukun Islam yang ke-____.",
+   "opts": [
+    "5",
+    "3",
+    "2"
+   ],
+   "ans": "5",
+   "sol": "Haji adalah rukun Islam yang kelima."
+  },
+  {
+   "fmt": "kata",
+   "q": "Syahadat tauhid bersaksi kepada ____.",
+   "opts": [
+    "Allah Swt.",
+    "Nabi Muhammad",
+    "malaikat"
+   ],
+   "ans": "Allah Swt.",
+   "sol": "Syahadat tauhid bersaksi bahwa tiada Tuhan selain Allah."
+  },
+  {
+   "fmt": "kata",
+   "q": "Syahadat rasul bersaksi kepada Nabi ____.",
+   "opts": [
+    "Muhammad",
+    "Adam",
+    "Nuh"
+   ],
+   "ans": "Muhammad",
+   "sol": "Syahadat rasul bersaksi bahwa Nabi Muhammad adalah utusan Allah."
+  },
+  {
+   "fmt": "kata",
+   "q": "Kalimat syahadat dibaca ketika kita melaksanakan salat, yaitu saat duduk ____.",
+   "opts": [
+    "tasyahud",
+    "bersila",
+    "istirahat"
+   ],
+   "ans": "tasyahud",
+   "sol": "Syahadat dibaca saat duduk tasyahud (tahiyat) dalam salat."
+  },
+  {
+   "fmt": "pg",
+   "q": "Bacaan ini adalah …<div class=\"ar\">أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ</div><div class=\"lat\">Asyhadu an lā ilāha illallāh</div>",
+   "opts": [
+    "syahadat tauhid",
+    "syahadat rasul",
+    "doa makan"
+   ],
+   "ans": "syahadat tauhid",
+   "sol": "Ini syahadat tauhid. Artinya: “Aku bersaksi bahwa tiada Tuhan selain Allah.”"
+  },
+  {
+   "fmt": "pg",
+   "q": "Bacaan ini adalah …<div class=\"ar\">وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللّٰهِ</div><div class=\"lat\">Wa asyhadu anna Muḥammadar rasūlullāh</div>",
+   "opts": [
+    "syahadat tauhid",
+    "syahadat rasul",
+    "doa tidur"
+   ],
+   "ans": "syahadat rasul",
+   "sol": "Ini syahadat rasul. Artinya: “Dan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah.”"
+  },
+  {
+   "fmt": "jodoh",
+   "fixed": true,
+   "q": "Jodohkan dengan artinya.",
+   "pairs": [
+    {
+     "key": "tauhid",
+     "L": "<span class=\"small\">Syahadat tauhid</span>",
+     "R": "<span class=\"small\">tiada Tuhan selain Allah</span>"
+    },
+    {
+     "key": "rasul",
+     "L": "<span class=\"small\">Syahadat rasul</span>",
+     "R": "<span class=\"small\">Nabi Muhammad utusan Allah</span>"
+    },
+    {
+     "key": "dua",
+     "L": "<span class=\"small\">Syahadatain</span>",
+     "R": "<span class=\"small\">dua kalimat syahadat</span>"
+    }
+   ],
+   "sol": "Syahadat tauhid: bersaksi tiada Tuhan selain Allah. Syahadat rasul: bersaksi Nabi Muhammad utusan Allah. Syahadatain: dua kalimat syahadat."
+  },
+  {
+   "fmt": "urut",
+   "fixed": true,
+   "q": "Urutkan rukun Islam dari yang <b>pertama</b>.",
+   "asc": true,
+   "items": [
+    {
+     "html": "Syahadat",
+     "v": 1,
+     "txt": "Syahadat"
+    },
+    {
+     "html": "Salat",
+     "v": 2,
+     "txt": "Salat"
+    },
+    {
+     "html": "Zakat",
+     "v": 3,
+     "txt": "Zakat"
+    },
+    {
+     "html": "<span class=\"small\">Puasa Ramadan</span>",
+     "v": 4,
+     "txt": "Puasa Ramadan"
+    },
+    {
+     "html": "Haji",
+     "v": 5,
+     "txt": "Haji"
+    }
+   ],
+   "sol": "Rukun Islam: 1. Syahadat, 2. Salat, 3. Zakat, 4. Puasa Ramadan, 5. Haji."
+  },
+  {
+   "fmt": "multi",
+   "fixed": true,
+   "wide": true,
+   "q": "Pilih <b>semua</b> saat kita membaca atau mendengar kalimat syahadat.",
+   "items": [
+    {
+     "html": "<span class=\"small\">Saat azan</span>",
+     "ok": true
+    },
+    {
+     "html": "<span class=\"small\">Saat iqamah</span>",
+     "ok": true
+    },
+    {
+     "html": "<span class=\"small\">Duduk tasyahud dalam salat</span>",
+     "ok": true
+    },
+    {
+     "html": "<span class=\"small\">Doa setelah wudu</span>",
+     "ok": true
+    },
+    {
+     "html": "<span class=\"small\">Saat makan siang</span>",
+     "ok": false
+    },
+    {
+     "html": "<span class=\"small\">Saat bermain bola</span>",
+     "ok": false
+    }
+   ],
+   "sol": "Syahadat ada di azan, iqamah, tasyahud dalam salat, dan doa setelah wudu."
+  }
+ ]
+}

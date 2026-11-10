@@ -1,0 +1,282 @@
+{
+ "slug": "PAI_NABI",
+ "title": "PAI: Kisah Nabi Adam, Idris & Nuh",
+ "level": "k1",
+ "ordered": false,
+ "public": true,
+ "assets": null,
+ "questions": [
+  {
+   "fmt": "pg",
+   "q": "Nabi Adam a.s. adalah manusia pertama yang diciptakan oleh ….",
+   "opts": [
+    "malaikat",
+    "Allah Swt.",
+    "manusia"
+   ],
+   "ans": "Allah Swt.",
+   "sol": "Nabi Adam a.s. adalah manusia pertama yang diciptakan oleh Allah Swt."
+  },
+  {
+   "fmt": "pg",
+   "q": "Nabi Adam a.s. diciptakan oleh Allah Swt. dari ….",
+   "opts": [
+    "tanah",
+    "air",
+    "api"
+   ],
+   "ans": "tanah",
+   "sol": "Nabi Adam a.s. diciptakan dari tanah."
+  },
+  {
+   "fmt": "pg",
+   "q": "Istri Nabi Adam a.s. bernama ….",
+   "opts": [
+    "Siti Aminah",
+    "Siti Hawa",
+    "Siti Maryam"
+   ],
+   "ans": "Siti Hawa",
+   "sol": "Istri Nabi Adam a.s. adalah Siti Hawa."
+  },
+  {
+   "fmt": "pg",
+   "q": "Nabi Adam a.s. dan Siti Hawa pernah tinggal di ….",
+   "opts": [
+    "surga",
+    "gunung",
+    "laut"
+   ],
+   "ans": "surga",
+   "sol": "Nabi Adam a.s. dan Siti Hawa pernah tinggal di surga sebelum diturunkan ke bumi."
+  },
+  {
+   "fmt": "pg",
+   "q": "Nabi Idris a.s. adalah nabi yang rajin ….",
+   "opts": [
+    "bermain",
+    "belajar dan beribadah",
+    "bermalas-malasan"
+   ],
+   "ans": "belajar dan beribadah",
+   "sol": "Nabi Idris a.s. rajin belajar dan beribadah."
+  },
+  {
+   "fmt": "pg",
+   "q": "Salah satu keistimewaan Nabi Idris a.s. adalah pandai ….",
+   "opts": [
+    "menjahit",
+    "berenang",
+    "memasak"
+   ],
+   "ans": "menjahit",
+   "sol": "Nabi Idris a.s. pandai menjahit pakaian."
+  },
+  {
+   "fmt": "pg",
+   "q": "Nabi Nuh a.s. mengajak kaumnya untuk menyembah ….",
+   "opts": [
+    "berhala",
+    "matahari",
+    "Allah Swt."
+   ],
+   "ans": "Allah Swt.",
+   "sol": "Nabi Nuh a.s. mengajak kaumnya menyembah Allah Swt., bukan berhala."
+  },
+  {
+   "fmt": "pg",
+   "q": "Nabi Nuh a.s. membuat kapal besar atas perintah ….",
+   "opts": [
+    "Allah Swt.",
+    "kaumnya",
+    "raja"
+   ],
+   "ans": "Allah Swt.",
+   "sol": "Nabi Nuh a.s. membuat kapal besar karena perintah Allah Swt."
+  },
+  {
+   "fmt": "pg",
+   "q": "Putra Nabi Nuh a.s. yang tidak mengikuti ajakan Nabi Nuh bernama ….",
+   "opts": [
+    "Qabil",
+    "Habil",
+    "Kan’an"
+   ],
+   "ans": "Kan’an",
+   "sol": "Kan’an adalah putra Nabi Nuh a.s. yang tidak mau naik ke kapal."
+  },
+  {
+   "fmt": "pg",
+   "q": "Ketika melakukan kesalahan, kita harus meneladani Nabi Adam a.s. dengan cara ….",
+   "opts": [
+    "menyalahkan orang lain",
+    "meminta ampun kepada Allah Swt.",
+    "mengulangi kesalahan"
+   ],
+   "ans": "meminta ampun kepada Allah Swt.",
+   "sol": "Nabi Adam a.s. segera memohon ampun kepada Allah Swt. saat berbuat salah. Kita juga begitu."
+  },
+  {
+   "fmt": "kata",
+   "q": "Manusia pertama yang diciptakan oleh Allah Swt. adalah Nabi ____.",
+   "opts": [
+    "Adam",
+    "Nuh",
+    "Idris"
+   ],
+   "ans": "Adam",
+   "sol": "Manusia pertama adalah Nabi Adam a.s."
+  },
+  {
+   "fmt": "kata",
+   "q": "Nabi Adam a.s. diciptakan dari ____.",
+   "opts": [
+    "tanah",
+    "air",
+    "cahaya"
+   ],
+   "ans": "tanah",
+   "sol": "Nabi Adam a.s. diciptakan dari tanah."
+  },
+  {
+   "fmt": "kata",
+   "q": "Nabi Adam dan Siti Hawa diturunkan ke bumi karena makan buah ____.",
+   "opts": [
+    "khuldi",
+    "apel",
+    "kurma"
+   ],
+   "ans": "khuldi",
+   "sol": "Mereka diturunkan ke bumi karena memakan buah khuldi yang dilarang Allah."
+  },
+  {
+   "fmt": "kata",
+   "q": "Ketika berbuat salah, Nabi Adam a.s. segera memohon ____ kepada Allah Swt.",
+   "opts": [
+    "ampun",
+    "hadiah",
+    "makanan"
+   ],
+   "ans": "ampun",
+   "sol": "Nabi Adam a.s. segera memohon ampun kepada Allah Swt."
+  },
+  {
+   "fmt": "kata",
+   "q": "Nabi Idris a.s. terkenal sebagai nabi yang pandai menjahit ____.",
+   "opts": [
+    "pakaian",
+    "kayu",
+    "batu"
+   ],
+   "ans": "pakaian",
+   "sol": "Nabi Idris a.s. pandai menjahit pakaian."
+  },
+  {
+   "fmt": "kata",
+   "q": "Kaum Nabi Idris a.s. bernama Bani ____.",
+   "opts": [
+    "Qabil",
+    "Israil",
+    "Hasyim"
+   ],
+   "ans": "Qabil",
+   "sol": "Nabi Idris a.s. berdakwah kepada kaum Bani Qabil."
+  },
+  {
+   "fmt": "kata",
+   "q": "Kaum Bani Qabil menyembah ____.",
+   "opts": [
+    "berhala",
+    "Allah Swt.",
+    "malaikat"
+   ],
+   "ans": "berhala",
+   "sol": "Kaum Bani Qabil menyembah berhala, lalu diajak Nabi Idris a.s. menyembah Allah."
+  },
+  {
+   "fmt": "kata",
+   "q": "Nabi Nuh a.s. berdakwah selama ____ tahun.",
+   "opts": [
+    "950",
+    "100",
+    "40"
+   ],
+   "ans": "950",
+   "sol": "Nabi Nuh a.s. berdakwah selama 950 tahun. Sabar sekali!"
+  },
+  {
+   "fmt": "kata",
+   "q": "Kita harus meneladani Nabi Idris a.s. dengan rajin belajar dan rajin ____.",
+   "opts": [
+    "beribadah",
+    "bermain",
+    "tidur"
+   ],
+   "ans": "beribadah",
+   "sol": "Teladan Nabi Idris a.s.: rajin belajar dan rajin beribadah."
+  },
+  {
+   "fmt": "kata",
+   "q": "Azab yang diberikan Allah kepada umat Nabi Nuh a.s. yang ingkar adalah ____.",
+   "opts": [
+    "banjir besar",
+    "gempa bumi",
+    "angin kencang"
+   ],
+   "ans": "banjir besar",
+   "sol": "Umat Nabi Nuh a.s. yang ingkar ditimpa banjir besar. Yang naik kapal selamat."
+  },
+  {
+   "fmt": "jodoh",
+   "fixed": true,
+   "q": "Jodohkan nabi dengan kisahnya.",
+   "pairs": [
+    {
+     "key": "adam",
+     "L": "<span class=\"small\">Nabi Adam a.s.</span>",
+     "R": "<span class=\"small\">manusia pertama</span>"
+    },
+    {
+     "key": "idris",
+     "L": "<span class=\"small\">Nabi Idris a.s.</span>",
+     "R": "<span class=\"small\">pandai menjahit</span>"
+    },
+    {
+     "key": "nuh",
+     "L": "<span class=\"small\">Nabi Nuh a.s.</span>",
+     "R": "<span class=\"small\">membuat kapal besar</span>"
+    }
+   ],
+   "sol": "Nabi Adam a.s. manusia pertama; Nabi Idris a.s. pandai menjahit; Nabi Nuh a.s. membuat kapal besar."
+  },
+  {
+   "fmt": "urut",
+   "fixed": true,
+   "q": "Urutkan kisah Nabi Nuh a.s. dari awal sampai akhir.",
+   "asc": true,
+   "items": [
+    {
+     "html": "<span class=\"small\">Nabi Nuh mengajak kaumnya menyembah Allah</span>",
+     "v": 1,
+     "txt": "mengajak menyembah Allah"
+    },
+    {
+     "html": "<span class=\"small\">Banyak kaumnya menolak dan mengejek</span>",
+     "v": 2,
+     "txt": "kaumnya menolak"
+    },
+    {
+     "html": "<span class=\"small\">Allah memerintahkan membuat kapal besar</span>",
+     "v": 3,
+     "txt": "membuat kapal"
+    },
+    {
+     "html": "<span class=\"small\">Banjir besar datang, yang naik kapal selamat</span>",
+     "v": 4,
+     "txt": "banjir besar"
+    }
+   ],
+   "sol": "Nabi Nuh mengajak menyembah Allah → kaumnya menolak → Allah memerintahkan membuat kapal → banjir besar datang."
+  }
+ ]
+}
