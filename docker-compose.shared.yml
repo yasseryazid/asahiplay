@@ -1,0 +1,56 @@
+# Asahi di server yang SUDAH punya reverse proxy (Caddy) untuk proyek lain.
+# Tidak membuka port 80/443/3306 ke host; hanya container `asahiplay-web` yang
+# bergabung ke jaringan proxy dengan alias unik, supaya proyek lain tidak tersenggol.
+#   docker-compose -f docker-compose.shared.yml up -d --build
+# Wajib di .env:  COMPOSE_PROJECT_NAME=asahiplay  dan  PROXY_NETWORK=<nama jaringan proxy>
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    entrypoint: ["entrypoint.prod.sh"]
+    command: ["php-fpm"]
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_HOST: db
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+    networks: [internal]
+
+  web:
+    image: nginx:1.27-alpine
+    container_name: asahiplay-web
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html:ro
+      - ./docker/nginx/shared.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    networks:
+      internal:
+      proxy:
+        aliases: [asahiplay-web]
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-asahi}
+      MYSQL_USER: ${DB_USERNAME:-asahi}
+      MYSQL_PASSWORD: ${DB_PASSWORD:?isi DB_PASSWORD di .env}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?isi DB_ROOT_PASSWORD di .env}
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks: [internal]
+
+networks:
+  internal:
+  proxy:
+    external: true
+    name: ${PROXY_NETWORK:?isi PROXY_NETWORK di .env}
+
+volumes:
+  dbdata:
