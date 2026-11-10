@@ -1,0 +1,54 @@
+# Produksi: docker compose -f docker-compose.prod.yml up -d --build
+# Variabel (DB_PASSWORD, APP_DOMAIN, dst.) dibaca dari file .env di folder ini.
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    entrypoint: ["entrypoint.prod.sh"]
+    command: ["php-fpm"]
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_HOST: db
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?isi APP_DOMAIN di .env}
+    volumes:
+      - ./:/var/www/html:ro
+      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-asahi}
+      MYSQL_USER: ${DB_USERNAME:-asahi}
+      MYSQL_PASSWORD: ${DB_PASSWORD:?isi DB_PASSWORD di .env}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?isi DB_ROOT_PASSWORD di .env}
+    volumes:
+      - dbdata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u$$MYSQL_USER -p$$MYSQL_PASSWORD"]
+      interval: 5s
+      retries: 30
+
+volumes:
+  dbdata:
+  caddy_data:
+  caddy_config:
