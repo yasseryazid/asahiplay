@@ -857,7 +857,19 @@ const G = {tab: false, lv: null, tk: null, round: 0, total: 0, miss: 0, items: 0
 const M = {lines: [], temp: null, flash: null, matched: 0, n: 0, sel: null, drag: null};
 let board = null, svg = null;
 const area = $('#area');
-function show(id) { document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id)); window.scrollTo(0, 0); }
+function paint(id) { document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id)); window.scrollTo(0, 0); }
+/* tombol back perangkat: kembali ke layar sebelumnya, bukan keluar dari aplikasi */
+function show(id) {
+  const cur = history.state && history.state.s;
+  if (cur == null) history.replaceState({s: id}, ''); else if (cur !== id) history.pushState({s: id}, '');
+  paint(id);
+}
+window.addEventListener('popstate', e => {
+  let id = e.state && e.state.s;
+  if (!id) return;
+  if (id === 'play' || id === 'result') { id = 'topics'; history.replaceState({s: id}, ''); } // permainan tidak bisa dilanjutkan
+  paint(id);
+});
 document.querySelectorAll('[data-home]').forEach(b => b.onclick = () => renderHome());
 
 function greet() { const h = new Date().getHours(); return h < 11 ? 'Selamat pagi' : h < 15 ? 'Selamat siang' : h < 18 ? 'Selamat sore' : 'Selamat malam'; }
