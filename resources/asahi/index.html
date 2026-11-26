@@ -857,7 +857,27 @@ const G = {tab: false, lv: null, tk: null, round: 0, total: 0, miss: 0, items: 0
 const M = {lines: [], temp: null, flash: null, matched: 0, n: 0, sel: null, drag: null};
 let board = null, svg = null;
 const area = $('#area');
-function show(id) { document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id)); window.scrollTo(0, 0); }
+/* Riwayat browser: tombol Back device kembali ke layar sebelumnya, bukan keluar aplikasi.
+   Kedalaman: home/login 0 · topics, parent, album, kids 1 · play, result 2. */
+const DEPTH = {home: 0, login: 0, topics: 1, parent: 1, album: 1, kids: 1, play: 2, result: 2};
+function show(id) {
+  const d = DEPTH[id], st = history.state, c = st && st.d;
+  if (c == null) {
+    history.replaceState({s: id, d}, '');
+    if (d > 0) { history.replaceState({s: 'home', d: 0}, ''); history.pushState({s: id, d}, ''); }
+  } else if (d > c) history.pushState({s: id, d}, '');
+  else if (d === c) history.replaceState({s: id, d}, '');
+  else if (!navPop) { navPop = true; history.go(d - c); }
+  document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id)); window.scrollTo(0, 0);
+}
+let navPop = false;
+window.addEventListener('popstate', e => {
+  navPop = false;
+  const s = e.state && e.state.s;
+  if (!s || document.getElementById(s).classList.contains('on')) return;
+  board = null;
+  if (s === 'topics' && G.lv) openLevel(G.lv); else renderHome();
+});
 document.querySelectorAll('[data-home]').forEach(b => b.onclick = () => renderHome());
 
 function greet() { const h = new Date().getHours(); return h < 11 ? 'Selamat pagi' : h < 15 ? 'Selamat siang' : h < 18 ? 'Selamat sore' : 'Selamat malam'; }
