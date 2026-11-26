@@ -2335,6 +2335,7 @@ $('#kAdd').onclick = async () => {
 $('#kidsBack').onclick = () => renderHome();
 
 function bootApp() {
+  history.replaceState(null, ''); // reload: abaikan state riwayat lama, aplikasi selalu mulai dari awal
   if (BOOT.server && !BOOT.user && !GUEST()) return showLogin();
   if (ONLINE() && (!BOOT.user.consented || !CHILDREN.length)) return openKids();
   renderHome();
