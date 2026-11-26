@@ -865,7 +865,18 @@ const G = {tab: false, lv: null, tk: null, round: 0, total: 0, miss: 0, items: 0
 const M = {lines: [], temp: null, flash: null, matched: 0, n: 0, sel: null, drag: null};
 let board = null, svg = null;
 const area = $('#area');
-function show(id) { document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id)); window.scrollTo(0, 0); }
+let curScreen = null;
+function show(id, pop) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id)); window.scrollTo(0, 0);
+  if (!pop && id !== curScreen) { try { history[curScreen === null ? 'replaceState' : 'pushState']({s: id}, ''); } catch (e) {} }
+  curScreen = id;
+}
+/* Tombol Back perangkat: kembali ke layar sebelumnya di dalam aplikasi, bukan keluar dari aplikasi. */
+window.addEventListener('popstate', e => {
+  let s = e.state && e.state.s; if (!s) return;
+  if (s === 'play' || s === 'result') s = G.lv ? 'topics' : 'home';
+  show(s, true);
+});
 document.querySelectorAll('[data-home]').forEach(b => b.onclick = () => renderHome());
 
 function greet() { const h = new Date().getHours(); return h < 11 ? 'Selamat pagi' : h < 15 ? 'Selamat siang' : h < 18 ? 'Selamat sore' : 'Selamat malam'; }
